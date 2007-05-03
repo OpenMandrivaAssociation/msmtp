@@ -1,5 +1,5 @@
 %define name msmtp
-%define version 1.4.10
+%define version 1.4.11
 %define release %mkrel 1
 
 Summary:	An SMTP client
