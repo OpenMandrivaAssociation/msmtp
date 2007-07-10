@@ -1,20 +1,16 @@
-%define name msmtp
-%define version 1.4.11
-%define release %mkrel 1
-
 Summary:	An SMTP client
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		msmtp
+Version:	1.4.12
+Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
 URL:		http://msmtp.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/msmtp/%{name}-%{version}.tar.bz2
 Source1:	msmtprc
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 BuildRequires:	openssl-devel >= 0:0.9.6
 BuildRequires:	libgcrypt-devel >= 0:1.2.0
 Provides:	sendmail-command
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 msmtp is an SMTP client that one can use with mail user agents that 
@@ -69,9 +65,7 @@ rm -rf %{buildroot}
 %files -f %name.lang
 %defattr(-, root, root, 0755)
 %doc README THANKS NEWS COPYING AUTHORS doc/msmtp.pdf doc/msmtprc-user.example doc/msmtp.html doc/Mutt+msmtp.txt doc/msmtprc-system.example
+%config(noreplace) %{_sysconfdir}/msmtprc
 %{_bindir}/*
 %{_mandir}/man1/*
 %{_infodir}/*
-%config(noreplace) %{_sysconfdir}/msmtprc
-
-
