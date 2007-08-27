@@ -1,8 +1,8 @@
 Summary:	An SMTP client
 Name:		msmtp
-Version:	1.4.12
+Version:	1.4.13
 Release:	%mkrel 1
-License:	GPL
+License:	GPLv3
 Group:		System/Servers
 URL:		http://msmtp.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/msmtp/%{name}-%{version}.tar.bz2
@@ -64,7 +64,8 @@ rm -rf %{buildroot}
 
 %files -f %name.lang
 %defattr(-, root, root, 0755)
-%doc README THANKS NEWS COPYING AUTHORS doc/msmtp.pdf doc/msmtprc-user.example doc/msmtp.html doc/Mutt+msmtp.txt doc/msmtprc-system.example
+%doc README THANKS NEWS COPYING AUTHORS doc/msmtp.pdf doc/msmtprc-user.example
+%doc doc/msmtp.html doc/Mutt+msmtp.txt doc/msmtprc-system.example scripts/msmtpqueue
 %config(noreplace) %{_sysconfdir}/msmtprc
 %{_bindir}/*
 %{_mandir}/man1/*
