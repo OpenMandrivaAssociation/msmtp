@@ -1,6 +1,6 @@
 Summary:	An SMTP client
 Name:		msmtp
-Version:	1.4.13
+Version:	1.4.15
 Release:	%mkrel 1
 License:	GPLv3
 Group:		System/Servers
@@ -10,7 +10,7 @@ Source1:	msmtprc
 BuildRequires:	openssl-devel >= 0:0.9.6
 BuildRequires:	libgcrypt-devel >= 0:1.2.0
 Provides:	sendmail-command
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 msmtp is an SMTP client that one can use with mail user agents that 
