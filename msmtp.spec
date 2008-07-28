@@ -34,12 +34,12 @@ Supported features:
 %setup -q
 
 %build
-%configure --with-ssl=openssl --disable-gsasl
+%configure2_5x --with-ssl=openssl --disable-gsasl
 %{__make}
 
 %install
 %{__rm} -rf %{buildroot}
-%makeinstall
+%makeinstall_std
 
 mkdir -p %{buildroot}/%{_sysconfdir}
 cp %{SOURCE1} %{buildroot}/%{_sysconfdir}/msmtprc
