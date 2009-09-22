@@ -1,7 +1,7 @@
 Summary:	An SMTP client
 Name:		msmtp
 Version:	1.4.18
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv3
 Group:		System/Servers
 URL:		http://msmtp.sourceforge.net/
@@ -51,7 +51,7 @@ chmod 644 %{buildroot}/%{_sysconfdir}/msmtprc
 %_install_info %{name}.info
 update-alternatives \
 	--install %{_sbindir}/sendmail sendmail-command %{_bindir}/msmtp 5 \
-	--slave %{_libdir}/sendmail sendmail-command-in_libdir %{_bindir}/msmtp
+	--slave %_prefix/lib/sendmail sendmail-command-in_libdir %{_bindir}/msmtp
 
 %preun
 %_remove_install_info %{name}.info
