@@ -1,7 +1,7 @@
 Summary:	An SMTP client
 Name:		msmtp
 Version:	1.4.20
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv3
 Group:		System/Servers
 URL:		http://msmtp.sourceforge.net/
