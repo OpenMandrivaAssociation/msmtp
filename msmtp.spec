@@ -1,14 +1,12 @@
 Summary:	An SMTP client
 Name:		msmtp
-Version:	1.4.20
-Release:	%mkrel 2
+Version:	1.4.21
+Release:	%mkrel 1
 License:	GPLv3
 Group:		System/Servers
 URL:		http://msmtp.sourceforge.net/
-Source0:	http://prdownloads.sourceforge.net/msmtp/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/project/msmtp/msmtp/%{version}/%{name}-%{version}.tar.bz2
 Source1:	msmtprc
-# stack is undeclared under new openssl
-Patch0:		msmtp-1.4.20-stack.patch
 BuildRequires:	openssl-devel >= 0:0.9.6
 BuildRequires:	libgcrypt-devel >= 0:1.2.0
 Provides:	sendmail-command
@@ -34,7 +32,6 @@ Supported features:
 
 %prep
 %setup -q
-%patch0 -p1 -b .stack
 
 %build
 %configure2_5x --with-ssl=openssl --disable-gsasl
