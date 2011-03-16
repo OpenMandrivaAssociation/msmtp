@@ -1,6 +1,6 @@
 Summary:	An SMTP client
 Name:		msmtp
-Version:	1.4.21
+Version:	1.4.23
 Release:	%mkrel 1
 License:	GPLv3
 Group:		System/Servers
