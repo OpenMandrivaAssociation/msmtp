@@ -1,6 +1,6 @@
 Summary:	An SMTP client
 Name:		msmtp
-Version:	1.4.23
+Version:	1.4.24
 Release:	%mkrel 1
 License:	GPLv3
 Group:		System/Servers
@@ -64,8 +64,8 @@ rm -rf %{buildroot}
 
 %files -f %name.lang
 %defattr(-, root, root, 0755)
-%doc README THANKS NEWS COPYING AUTHORS doc/msmtp.pdf doc/msmtprc-user.example
-%doc doc/msmtp.html doc/Mutt+msmtp.txt doc/msmtprc-system.example scripts/msmtpqueue
+%doc README THANKS NEWS COPYING AUTHORS doc/msmtp.info doc/msmtprc-user.example
+%doc doc/Mutt+msmtp.txt doc/msmtprc-system.example scripts/msmtpqueue
 %config(noreplace) %{_sysconfdir}/msmtprc
 %{_bindir}/*
 %{_mandir}/man1/*
