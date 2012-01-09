@@ -1,16 +1,15 @@
 Summary:	An SMTP client
 Name:		msmtp
-Version:	1.4.26
+Version:	1.4.27
 Release:	1
 License:	GPLv3
 Group:		System/Servers
 URL:		http://msmtp.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/project/msmtp/msmtp/%{version}/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/project/msmtp/msmtp/1.4.27/msmtp-%{version}.tar.bz2
 Source1:	msmtprc
 BuildRequires:	openssl-devel >= 0:0.9.6
 BuildRequires:	libgcrypt-devel >= 0:1.2.0
 Provides:	sendmail-command
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 msmtp is an SMTP client that one can use with mail user agents that 
@@ -38,7 +37,6 @@ Supported features:
 %{__make}
 
 %install
-%{__rm} -rf %{buildroot}
 %makeinstall_std
 
 mkdir -p %{buildroot}/%{_sysconfdir}
@@ -58,9 +56,6 @@ update-alternatives \
 if [ $1 = 0 ]; then
         update-alternatives --remove sendmail-command %{_bindir}/msmtp
 fi
-
-%clean
-rm -rf %{buildroot}
 
 %files -f %name.lang
 %defattr(-, root, root, 0755)
