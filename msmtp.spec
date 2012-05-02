@@ -1,11 +1,11 @@
 Summary:	An SMTP client
 Name:		msmtp
-Version:	1.4.27
+Version:	1.4.28
 Release:	1
 License:	GPLv3
 Group:		System/Servers
 URL:		http://msmtp.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/project/msmtp/msmtp/1.4.27/msmtp-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/project/msmtp/msmtp/%{version}/msmtp-%{version}.tar.bz2
 Source1:	msmtprc
 BuildRequires:	openssl-devel >= 0:0.9.6
 BuildRequires:	libgcrypt-devel >= 0:1.2.0
