@@ -65,3 +65,88 @@ fi
 %{_bindir}/*
 %{_mandir}/man1/*
 %{_infodir}/*
+
+
+%changelog
+* Wed May 02 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.4.28-1
++ Revision: 795144
+- version update 1.4.28
+
+* Mon Jan 09 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.4.27-1
++ Revision: 759176
+- version update 1.4.27
+
+* Mon Nov 28 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.4.26-1
++ Revision: 734955
+- version update 1.4.26
+
+* Wed May 11 2011 Sandro Cazzaniga <kharec@mandriva.org> 1.4.24-1
++ Revision: 673684
+- update 1.4.24
+- update %%doc
+
+* Wed Mar 16 2011 Stéphane Téletchéa <steletch@mandriva.org> 1.4.23-1
++ Revision: 645308
+- update to new version 1.4.23
+
+* Sat Aug 07 2010 Ahmad Samir <ahmadsamir@mandriva.org> 1.4.21-1mdv2011.0
++ Revision: 567272
+- update to 1.4.21
+- drop patch0, fixed upstream
+
+* Mon Apr 05 2010 Eugeni Dodonov <eugeni@mandriva.com> 1.4.20-2mdv2010.1
++ Revision: 531865
+- P0: properly handle subjectAltNames with openssl 1.0.0.
+- Rebuild for new openssl
+
+* Tue Mar 23 2010 Sandro Cazzaniga <kharec@mandriva.org> 1.4.20-1mdv2010.1
++ Revision: 526794
+- update msmtp to 1.4.20
+
+* Tue Nov 17 2009 Oden Eriksson <oeriksson@mandriva.com> 1.4.19-1mdv2010.1
++ Revision: 466865
+- 1.4.19 (fixes CVE-2009-3942)
+
+* Tue Sep 22 2009 Michael Scherer <misc@mandriva.org> 1.4.18-2mdv2010.0
++ Revision: 447268
+- fix link for sendmail, correct bug #53895
+
+* Sun Sep 20 2009 Frederik Himpe <fhimpe@mandriva.org> 1.4.18-1mdv2010.0
++ Revision: 445287
+- update to new version 1.4.18
+
+* Mon Sep 14 2009 Thierry Vignaud <tv@mandriva.org> 1.4.17-2mdv2010.0
++ Revision: 440162
+- rebuild
+
+* Sun Jan 04 2009 Jérôme Soyer <saispo@mandriva.org> 1.4.17-1mdv2009.1
++ Revision: 324877
+- update to new version 1.4.17
+
+* Mon Jul 28 2008 Funda Wang <fwang@mandriva.org> 1.4.16-1mdv2009.0
++ Revision: 250777
+- update to new version 1.4.16
+
+* Sun Jun 08 2008 Oden Eriksson <oeriksson@mandriva.com> 1.4.15-1mdv2009.0
++ Revision: 216818
+- 1.4.15
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Mon Aug 27 2007 Oden Eriksson <oeriksson@mandriva.com> 1.4.13-1mdv2008.0
++ Revision: 72093
+- 1.4.13
+- the license was changed to GPLv3
+
+* Tue Jul 10 2007 Oden Eriksson <oeriksson@mandriva.com> 1.4.12-1mdv2008.0
++ Revision: 50934
+- 1.4.12
+
+* Thu May 03 2007 Michael Scherer <misc@mandriva.org> 1.4.11-1mdv2008.0
++ Revision: 21504
+- update to 1.4.11
+
