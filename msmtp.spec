@@ -51,7 +51,6 @@ update-alternatives \
 	--slave %_prefix/lib/sendmail sendmail-command-in_libdir %{_bindir}/msmtp
 
 %preun
-%_remove_install_info %{name}.info
 if [ $1 = 0 ]; then
         update-alternatives --remove sendmail-command %{_bindir}/msmtp
 fi
