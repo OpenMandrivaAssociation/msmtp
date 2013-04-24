@@ -46,7 +46,6 @@ chmod 644 %{buildroot}/%{_sysconfdir}/msmtprc
 %find_lang %name
 
 %post
-%_install_info %{name}.info
 update-alternatives \
 	--install %{_sbindir}/sendmail sendmail-command %{_bindir}/msmtp 5 \
 	--slave %_prefix/lib/sendmail sendmail-command-in_libdir %{_bindir}/msmtp
