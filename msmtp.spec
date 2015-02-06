@@ -1,7 +1,7 @@
 Summary:	An SMTP client
 Name:		msmtp
 Version:	1.4.28
-Release:	2
+Release:	3
 License:	GPLv3
 Group:		System/Servers
 URL:		http://msmtp.sourceforge.net/
