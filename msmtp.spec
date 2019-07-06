@@ -37,6 +37,7 @@ Supported features:
 %setup -q
 
 %build
+autoreconf -vfi
 %configure2_5x --without-libgsasl
 %{__make}
 
