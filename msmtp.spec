@@ -1,3 +1,5 @@
+%define _disable_rebuild_configure 1
+
 Summary:	An SMTP client
 Name:		msmtp
 Version:	1.8.4
@@ -8,6 +10,7 @@ URL:		http://msmtp.sourceforge.net/
 Source0:	https://marlam.de/msmtp/releases/%{name}-%{version}.tar.xz
 #source mirror: https://github.com/marlam/msmtp-mirror
 Source1:	msmtprc
+BuildRequires:	gettext
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(libgcrypt)
 BuildRequires:	pkgconfig(gnutls)
