@@ -37,7 +37,7 @@ Supported features:
 %setup -q
 
 %build
-%configure2_5x --with-ssl=openssl --disable-gsasl
+%configure2_5x --without-libgsasl
 %{__make}
 
 %install
