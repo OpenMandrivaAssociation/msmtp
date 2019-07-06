@@ -1,14 +1,18 @@
 Summary:	An SMTP client
 Name:		msmtp
-Version:	1.4.28
-Release:	3
+Version:	1.8.4
+Release:	1
 License:	GPLv3
 Group:		System/Servers
 URL:		http://msmtp.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/project/msmtp/msmtp/%{version}/msmtp-%{version}.tar.bz2
+Source0:	https://marlam.de/msmtp/releases/%{name}-%{version}.tar.xz
+#source mirror: https://github.com/marlam/msmtp-mirror
 Source1:	msmtprc
-BuildRequires:	openssl-devel >= 0:0.9.6
-BuildRequires:	libgcrypt-devel >= 0:1.2.0
+BuildRequires:	pkgconfig(openssl)
+BuildRequires:	pkgconfig(libgcrypt)
+BuildRequires:	pkgconfig(gnutls)
+BuildRequires:  pkgconfig(libidn2)
+BuildRequires:  pkgconfig(libsecret-1)
 Provides:	sendmail-command
 
 %description
@@ -37,28 +41,28 @@ Supported features:
 %{__make}
 
 %install
-%makeinstall_std
+%make_install
 
-mkdir -p %{buildroot}/%{_sysconfdir}
-cp %{SOURCE1} %{buildroot}/%{_sysconfdir}/msmtprc
-chmod 644 %{buildroot}/%{_sysconfdir}/msmtprc
+mkdir -p %{buildroot}%{_sysconfdir}
+cp %{SOURCE1} %{buildroot}%{_sysconfdir}/msmtprc
+chmod 644 %{buildroot}%{_sysconfdir}/msmtprc
 
 %find_lang %name
 
 %post
+%_install_info %{name}.info
 update-alternatives \
 	--install %{_sbindir}/sendmail sendmail-command %{_bindir}/msmtp 5 \
 	--slave %_prefix/lib/sendmail sendmail-command-in_libdir %{_bindir}/msmtp
 
 %preun
+%_remove_install_info %{name}.info
 if [ $1 = 0 ]; then
         update-alternatives --remove sendmail-command %{_bindir}/msmtp
 fi
-
 %files -f %name.lang
-%defattr(-, root, root, 0755)
-%doc README THANKS NEWS COPYING AUTHORS doc/msmtp.info doc/msmtprc-user.example
-%doc doc/Mutt+msmtp.txt doc/msmtprc-system.example scripts/msmtpqueue
+%doc README THANKS NEWS COPYING AUTHORS doc/msmtprc-user.example
+%doc doc/msmtprc-system.example scripts/msmtpqueue
 %config(noreplace) %{_sysconfdir}/msmtprc
 %{_bindir}/*
 %{_mandir}/man1/*
