@@ -2,7 +2,7 @@
 
 Summary:	An SMTP client
 Name:		msmtp
-Version:	1.8.4
+Version:	1.8.24
 Release:	1
 License:	GPLv3
 Group:		System/Servers
