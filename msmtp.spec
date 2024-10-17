@@ -6,7 +6,7 @@ Version:	1.8.25
 Release:	1
 License:	GPLv3
 Group:		System/Servers
-URL:		http://msmtp.sourceforge.net/
+URL:		https://msmtp.sourceforge.net/
 Source0:	https://marlam.de/msmtp/releases/%{name}-%{version}.tar.xz
 #source mirror: https://github.com/marlam/msmtp-mirror
 Source1:	msmtprc
